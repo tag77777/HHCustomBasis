@@ -2,6 +2,7 @@ package a77777_888.me.t.https.hhcustombasis.fragments.adapters
 
 import a77777_888.me.t.https.hhcustombasis.databinding.VacanciesItemBinding
 import a77777_888.me.t.https.hhcustombasis.model.entities.vacancies.Vacancy
+import a77777_888.me.t.https.hhcustombasis.utils.toPatternDateStringFromISO8601String
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View.INVISIBLE
@@ -11,9 +12,6 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.google.gson.internal.bind.util.ISO8601Utils
-import java.text.ParsePosition
-import java.text.SimpleDateFormat
 
 interface VacanciesAdapterNavigator {
     fun goToVacancy(vacancyId: String)
@@ -54,7 +52,7 @@ class VacanciesAdapter(
             companyNameTextView.text = vacancy.employer.name
 
             areaTextView.text = "Размещено в г.${vacancy.area.name}   " +
-                    getDateStringFromISO8601(vacancy.published_at)
+                    vacancy.published_at.toPatternDateStringFromISO8601String()
 
             if (vacancy.employer.logo_urls?.original == null) logoImageView.visibility = INVISIBLE
             else {
@@ -75,15 +73,6 @@ class VacanciesAdapter(
 
     inner class ViewHolder(val binding: VacanciesItemBinding)
         : RecyclerView.ViewHolder(binding.root)
-
-    @SuppressLint("SimpleDateFormat")
-    private fun getDateStringFromISO8601(iso8601: String): String = try {
-        val data = ISO8601Utils.parse(iso8601, ParsePosition(0))
-        SimpleDateFormat("d MMMM yyyy, HH:mm").format(data)
-    } catch (e: Exception){ "" }
-        // required API level 26
-//         LocalDateTime.parse(iso8601.dropLast(5))
-//            .format(DateTimeFormatter.ofPattern("dd MMMM yyyy, HH:mm"))
 
 }
 

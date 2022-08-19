@@ -66,6 +66,7 @@ class EmployerFragment : BaseFragment(R.layout.fragment_employer) {
         viewModel.getEmployer(id)
     }
 
+    @Suppress("DEPRECATION")
     private fun initUI(response: EmployerResponseEntity) {
 
             with(response){

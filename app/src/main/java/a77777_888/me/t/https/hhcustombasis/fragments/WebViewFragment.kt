@@ -42,6 +42,7 @@ class WebViewFragment : Fragment(R.layout.fragment_web_view) {
         }
 
         // For old devices
+        @Deprecated("Deprecated in Java")
         override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
             view.loadUrl(url)
             return true

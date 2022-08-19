@@ -1,6 +1,6 @@
 package a77777_888.me.t.https.hhcustombasis.utils
 
-typealias ViewModelCreator<VM> = () -> VM
+//typealias ViewModelCreator<VM> = () -> VM
 
 //class ViewModelFactory<VM: ViewModel>(
 //    private val viewModelCreator: ViewModelCreator<VM>

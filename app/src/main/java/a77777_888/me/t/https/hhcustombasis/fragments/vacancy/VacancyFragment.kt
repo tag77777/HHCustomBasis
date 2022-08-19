@@ -7,6 +7,7 @@ import a77777_888.me.t.https.hhcustombasis.fragments.base.BaseFragment
 import a77777_888.me.t.https.hhcustombasis.fragments.employer.EmployerFragment
 import a77777_888.me.t.https.hhcustombasis.model.*
 import a77777_888.me.t.https.hhcustombasis.model.entities.vacancy.VacancyResponseEntity
+import a77777_888.me.t.https.hhcustombasis.utils.toPatternDateStringFromISO8601String
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
@@ -18,9 +19,6 @@ import android.view.View.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.gson.internal.bind.util.ISO8601Utils
-import java.text.ParsePosition
-import java.text.SimpleDateFormat
 
 class VacancyFragment : BaseFragment(R.layout.vacancy_fragment) {
 
@@ -69,6 +67,7 @@ class VacancyFragment : BaseFragment(R.layout.vacancy_fragment) {
         viewModel.getVacancy(vacancyId)
     }
 
+    @Suppress("DEPRECATION")
     @SuppressLint("SetTextI18n")
     private fun initUI() {
 
@@ -90,7 +89,8 @@ class VacancyFragment : BaseFragment(R.layout.vacancy_fragment) {
                 employerNameButton.setOnClickListener { onEmployerNameButtonPressed() }
 
                 areaTextView
-                    .append(" " + area.name + "   " + getDateStringFromISO8601(published_at))
+                    .append(" " + area.name + "   " +
+                            published_at.toPatternDateStringFromISO8601String() )
                 experienceTextView.append(experience.name)
                 employmentAndScheduleTextView.text = "${employment.name}  ${schedule.name}"
 
@@ -133,15 +133,6 @@ class VacancyFragment : BaseFragment(R.layout.vacancy_fragment) {
 
     companion object {
         const val ID = "vacancyId"
-
-        @SuppressLint("SimpleDateFormat")
-        private fun getDateStringFromISO8601(iso8601: String): String = try {
-            val data = ISO8601Utils.parse(iso8601, ParsePosition(0))
-            SimpleDateFormat("d MMMM yyyy, HH:mm").format(data)
-        } catch (e: Exception){ "" }
-            // required API level 26
-    //         LocalDateTime.parse(iso8601.dropLast(5))
-    //            .format(DateTimeFormatter.ofPattern("dd MMMM yyyy, HH:mm"))
     }
 
 }
