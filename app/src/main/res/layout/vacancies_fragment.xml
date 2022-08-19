@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/frameLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.vacancies.VacanciesFragment"
+    android:background="@drawable/search_background"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:name="com.a77777_888.app.hhcustombasis.fragments.vacancies.ItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layoutManager="LinearLayoutManager"
+
+        tools:listitem="@layout/vacancies_item"
+        tools:visibility="visible"
+        />
+
+    <include
+        android:id="@+id/loadStateView"
+        layout="@layout/default_load_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="16dp"
+
+        tools:visiblity="invisible"
+        />
+
+</FrameLayout>

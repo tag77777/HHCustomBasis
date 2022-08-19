@@ -1,0 +1,316 @@
+{
+  "items": [
+    {
+      "id": "67487031",
+      "premium": false,
+      "name": "Android разработчик",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "41",
+        "name": "Калининград",
+        "url": "https://api.hh.ru/areas/41"
+      },
+      "salary": {
+        "from": 50000,
+        "to": 100000,
+        "currency": "RUR",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2022-08-01T09:52:13+0300",
+      "created_at": "2022-08-01T09:52:13+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=67487031",
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/67487031?host=hh.ru",
+      "adv_response_url": "https://api.hh.ru/vacancies/67487031/adv_response?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/67487031",
+      "relations": [],
+      "employer": {
+        "id": "3333270",
+        "name": "Вуду Рокс",
+        "url": "https://api.hh.ru/employers/3333270",
+        "alternate_url": "https://hh.ru/employer/3333270",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/517454.jpg",
+          "240": "https://hhcdn.ru/employer-logo/2511294.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/2511293.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=3333270",
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт разработки мобильных приложений под <highlighttext>Android</highlighttext> (обязателен). Знание Kotlin или Java на уровне Junior / Middle. Знание основ ООП и базовых...",
+        "responsibility": "Cоздание пользовательского интерфейса в приложении на основе дизайна в Sketch, Figma, Zeplin или аналогичных. Разработка внутренней структуры приложения для хранения..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": true
+    },
+    {
+      "id": "68101891",
+      "premium": false,
+      "name": "Middle Android Developer",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": {
+        "from": 3500,
+        "to": 5000,
+        "currency": "USD",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2022-07-31T10:30:22+0300",
+      "created_at": "2022-07-31T10:30:22+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=68101891",
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/68101891?host=hh.ru",
+      "adv_response_url": "https://api.hh.ru/vacancies/68101891/adv_response?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/68101891",
+      "relations": [],
+      "employer": {
+        "id": "3836446",
+        "name": "PointPay",
+        "url": "https://api.hh.ru/employers/3836446",
+        "alternate_url": "https://hh.ru/employer/3836446",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/856418.png",
+          "90": "https://hhcdn.ru/employer-logo/3866547.png",
+          "240": "https://hhcdn.ru/employer-logo/3866548.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=3836446",
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт работы с объектно-ориентированным программированием (>3-х лет). Знание стандартов UI / UX. Знакомство с RESTful API. Возможность писать чистый...",
+        "responsibility": "Ежедневно общаться с проектным менеджером, дизайнерами и командой разработчиков через систему тикетов. Принимать участие в обсуждении лучших и наиболее эффективных..."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false
+    },
+    {
+      "id": "68300108",
+      "premium": false,
+      "name": "Разработчик Android",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": {
+        "from": 150000,
+        "to": null,
+        "currency": "RUR",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2022-07-30T09:24:12+0300",
+      "created_at": "2022-07-30T09:24:12+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=68300108",
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/68300108?host=hh.ru",
+      "adv_response_url": "https://api.hh.ru/vacancies/68300108/adv_response?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/68300108",
+      "relations": [],
+      "employer": {
+        "id": "8955334",
+        "name": "Айком",
+        "url": "https://api.hh.ru/employers/8955334",
+        "alternate_url": "https://hh.ru/employer/8955334",
+        "logo_urls": {
+          "240": "https://hhcdn.ru/employer-logo/5527797.jpeg",
+          "90": "https://hhcdn.ru/employer-logo/5527796.jpeg",
+          "original": "https://hhcdn.ru/employer-logo-original/976740.JPG"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=8955334",
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт разработки <highlighttext>Android</highlighttext> приложений от 2-х лет. - Знание <highlighttext>Android</highlighttext> API и архитектуры <highlighttext>Android</highlighttext>. - Понимание clean architecture. - Уверенное владение Java...",
+        "responsibility": "Участвовать в разработке клиентского приложения для платформы <highlighttext>Android</highlighttext>. - Разрабатывать новый функционал. - Разрабатывать отдельные компоненты приложения. - Помогать тестировщикам в локализации ошибок."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false
+    },
+    {
+      "id": "68282687",
+      "premium": false,
+      "name": "Android разработчик",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "4654",
+        "name": "Петропавловка (Республика Бурятия)",
+        "url": "https://api.hh.ru/areas/4654"
+      },
+      "salary": {
+        "from": null,
+        "to": 230000,
+        "currency": "RUR",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2022-07-29T12:44:37+0300",
+      "created_at": "2022-07-29T12:44:37+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=68282687",
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/68282687?host=hh.ru",
+      "adv_response_url": "https://api.hh.ru/vacancies/68282687/adv_response?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/68282687",
+      "relations": [],
+      "employer": {
+        "id": "4931636",
+        "name": "2people IT",
+        "url": "https://api.hh.ru/employers/4931636",
+        "alternate_url": "https://hh.ru/employer/4931636",
+        "logo_urls": {
+          "original": "https://hhcdn.ru/employer-logo-original/930332.png",
+          "240": "https://hhcdn.ru/employer-logo/4161889.png",
+          "90": "https://hhcdn.ru/employer-logo/4161888.png"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=4931636",
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "Опыт <highlighttext>Android</highlighttext> разработки (Kotlin/Java) от 2-х лет. Опыт применения одного из паттернов: MVP, MVVM, MVI. Опыт написания Unit...",
+        "responsibility": "2people IT ― компания, предоставляющая технологические услуги и создающая инновационные сервисы в области мобильной и веб разработки."
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": false
+    },
+    {
+      "id": "67596802",
+      "premium": false,
+      "name": "Android разработчик",
+      "department": null,
+      "has_test": false,
+      "response_letter_required": false,
+      "area": {
+        "id": "1",
+        "name": "Москва",
+        "url": "https://api.hh.ru/areas/1"
+      },
+      "salary": {
+        "from": 250000,
+        "to": null,
+        "currency": "RUR",
+        "gross": false
+      },
+      "type": {
+        "id": "open",
+        "name": "Открытая"
+      },
+      "address": null,
+      "response_url": null,
+      "sort_point_distance": null,
+      "published_at": "2022-08-01T09:36:48+0300",
+      "created_at": "2022-08-01T09:36:48+0300",
+      "archived": false,
+      "apply_alternate_url": "https://hh.ru/applicant/vacancy_response?vacancyId=67596802",
+      "insider_interview": null,
+      "url": "https://api.hh.ru/vacancies/67596802?host=hh.ru",
+      "adv_response_url": "https://api.hh.ru/vacancies/67596802/adv_response?host=hh.ru",
+      "alternate_url": "https://hh.ru/vacancy/67596802",
+      "relations": [],
+      "employer": {
+        "id": "4719197",
+        "name": "WorkinGeeks",
+        "url": "https://api.hh.ru/employers/4719197",
+        "alternate_url": "https://hh.ru/employer/4719197",
+        "logo_urls": {
+          "240": "https://hhcdn.ru/employer-logo/3444974.png",
+          "90": "https://hhcdn.ru/employer-logo/3444973.png",
+          "original": "https://hhcdn.ru/employer-logo-original/751003.jpeg"
+        },
+        "vacancies_url": "https://api.hh.ru/vacancies?employer_id=4719197",
+        "trusted": true
+      },
+      "snippet": {
+        "requirement": "От 3 лет опыта в сфере <highlighttext>Android</highlighttext> разработки. Хорошее знание Kotlin / Java (разработка ведется на Kotlin). Понимание принципов ООП и...",
+        "responsibility": "Решать нетривиальные задачи в <highlighttext>Android</highlighttext> проектах. Взаимодействовать с другими разработчиками, дизайнерами, тестировщиками, менеджерами и аналитиками. Исследовать и внедрять новые технологии. "
+      },
+      "contacts": null,
+      "schedule": {
+        "id": "remote",
+        "name": "Удаленная работа"
+      },
+      "working_days": [],
+      "working_time_intervals": [],
+      "working_time_modes": [],
+      "accept_temporary": true
+    }
+  ],
+  "found": 5,
+  "pages": 1,
+  "per_page": 20,
+  "page": 0,
+  "clusters": null,
+  "arguments": null,
+  "alternate_url": "https://hh.ru/search/vacancy?control_flag=vacancyBlacklistJoinEnabled%3ATrue&enable_snippets=true&excluded_text=senior&schedule=remote&search_field=name&text=android"
+}

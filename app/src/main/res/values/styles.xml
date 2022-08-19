@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="chipBackgroundColor">@color/chip_background</item>
+    </style>
+
+    <style name="TextInputLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="boxBackgroundColor">@color/colorViewBackground</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="helperTextTextColor">@color/colorViewBackground</item>
+    </style>
+
+    <style name="CardViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:elevation">8dp</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="android:backgroundTint">@color/colorViewBackground</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+</resources>

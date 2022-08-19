@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_background"
+    tools:context=".fragments.search.SearchFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:hint="@string/find"
+                android:layout_margin="8dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/findEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    tools:text="word" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:hint="@string/Exclude"
+                android:layout_margin="8dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/excludeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    tools:text="word" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/searchFieldChipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/nameFieldSearchChip"
+                        style="@style/ChipStyle"
+                        android:text="@string/in_name"
+                        android:checked="true"
+                        />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/descriptionFieldSearchChip"
+                        style="@style/ChipStyle"
+                        android:text="@string/in_description"
+                        android:checked="true"
+                        />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/companyNameFieldSearchChip"
+                        style="@style/ChipStyle"
+                        android:text="@string/in_the_company_name"
+                        />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:hint="@string/region"
+                app:helperText="@string/first_symbols"
+                android:layout_margin="8dp"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/regionEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/experience"
+                android:background="@color/colorViewBackground"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/ExperienceChipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/notMatterExperienceChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/not_matter"
+                    android:checked="true"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/noExperienceChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/no_experience"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/between1And3ExperienceChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/between_1_3"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/between3And6ExperienceChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/between_3_6"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/moreThan6ExperienceChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/more_than_6"
+                    />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/work_schedule"
+                android:background="@color/colorViewBackground"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/scheduleChipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/remoteScheduleChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/remote"
+                    android:checked="true"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fullDayScheduleChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/full_day"
+                    android:checked="true"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/shiftScheduleChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/shift"
+                    android:checked="true"
+                    />
+
+                <!-- Гибкий график -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/flexibleScheduleChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/flexible"
+                    android:checked="true"
+                    />
+                <!-- Вахтовый метод -->
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/flyInFlyOutScheduleChip"
+                    style="@style/ChipStyle"
+                    android:text="@string/fly_in_fly_out"
+                    />
+            </com.google.android.material.chip.ChipGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="wrap_content"
+                android:maxEms="3"
+                android:hint="@string/period"
+                app:helperText="@string/numbers_of_days"
+                android:layout_margin="8dp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/periodEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:lines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="96dp"
+        android:indeterminateDrawable="@drawable/spinner_ring"
+        android:indeterminateOnly="true"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/searchFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="16dp"
+        android:elevation="8dp"
+        android:src="@drawable/ic_search"
+        />
+</FrameLayout>

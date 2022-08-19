@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_background"
+    tools:context=".fragments.employer.EmployerFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/employerCardView"
+            style="@style/CardViewStyle"
+            android:layout_margin="8dp"
+            tools:visibility="visible"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/logoImageView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:visibility="invisible"
+                tools:visibility="visible"
+
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="#32000000"
+                />
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Company name. "
+
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/logoImageView"
+                app:layout_constraintTop_toTopOf="@id/logoImageView"
+                />
+
+            <TextView
+                android:id="@+id/areaTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Москва"
+
+                android:layout_marginTop="4dp"
+
+                app:layout_constraintStart_toStartOf="@id/nameTextView"
+                app:layout_constraintTop_toBottomOf="@id/nameTextView"
+                />
+
+            <TextView
+                android:id="@+id/typeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="Компания"
+
+                android:layout_marginTop="4dp"
+
+                app:layout_constraintStart_toStartOf="@id/nameTextView"
+                app:layout_constraintTop_toBottomOf="@id/areaTextView"
+                />
+
+            <Button
+                android:id="@+id/siteUrlButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?attr/materialButtonOutlinedStyle"
+                android:textAllCaps="false"
+                tools:text="dddddddddddddddddddddddddddddddddddddddddddddd"
+                android:visibility="gone"
+                tools:visibility="visible"
+
+                android:layout_margin="8dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/typeTextView"
+                />
+
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="8dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/siteUrlButton"
+                tools:text="description description description description description description description "
+                />
+
+            <TextView
+                android:id="@+id/labelIndustries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/industries"
+                android:textStyle="bold"
+                android:textSize="18sp"
+
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+
+                app:layout_constraintStart_toStartOf="@id/siteUrlButton"
+                app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+                />
+
+            <TextView
+                android:id="@+id/industriesTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="adfasd; dasf alkj asd asdf; asdf asdf adsf \n adfaa"
+
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+
+                app:layout_constraintStart_toStartOf="@id/siteUrlButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelIndustries"
+                />
+
+            <Button
+                android:id="@+id/alternateUrlButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="@string/hh_ru_company"
+
+                android:layout_margin="8dp"
+
+                app:layout_constraintStart_toStartOf="@id/siteUrlButton"
+                app:layout_constraintTop_toBottomOf="@id/industriesTextView"
+                />
+
+            <Button
+                android:id="@+id/companyFromBrowserButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="@string/see_in_browser"
+
+                android:layout_margin="8dp"
+
+                app:layout_constraintStart_toStartOf="@id/siteUrlButton"
+                app:layout_constraintTop_toBottomOf="@id/alternateUrlButton"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/waitLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="72dp"
+        tools:visibility="invisible"
+    >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/spinner_ring"
+            android:indeterminateOnly="true"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_wait"
+            android:textStyle="bold|italic"
+            android:textSize="18sp"
+            android:textColor="@color/teal_200"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="32dp"
+        tools:visibility="invisible"
+        >
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:textSize="18sp"
+            android:textColor="@color/teal_200"
+            android:layout_margin="8dp"
+            tools:text="Error Error Error Error Error Error Error Error Error Error "
+        />
+
+        <Button
+            android:id="@+id/tryAgainButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="@string/try_again"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>
