@@ -12,12 +12,13 @@ import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * Такая скромная функциональность была выделена в отдельный фрагмент с учетом перспективы
- * дальнейшего расширения. Может понадобиться авторизация, как приложения, так и пользователя,
- * и др.
+ * дальнейшего расширения. Может понадобиться авторизация, и не только..
  */
+@AndroidEntryPoint
 class InitialFragment : BaseFragment(R.layout.fragment_initial) {
 
     private lateinit var binding: FragmentInitialBinding

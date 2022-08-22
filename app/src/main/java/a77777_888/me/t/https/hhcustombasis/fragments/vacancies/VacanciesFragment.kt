@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collectLatest
@@ -21,6 +22,7 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 
 @ExperimentalCoroutinesApi
+@AndroidEntryPoint
 class VacanciesFragment
     : Fragment(R.layout.vacancies_fragment),
     VacanciesAdapterNavigator, DefaultLoadStateAdapterNavigator {

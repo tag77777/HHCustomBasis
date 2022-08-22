@@ -13,10 +13,17 @@ import com.squareup.moshi.JsonDataException
 import com.squareup.moshi.JsonEncodingException
 import kotlinx.coroutines.flow.Flow
 import retrofit2.HttpException
+import retrofit2.Retrofit
 import java.io.IOException
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class RetrofitSourceProvider(retrofitSource: RetrofitSource)
-    : SourceProvider {
+@Singleton
+class RetrofitSourceProvider
+    @Inject constructor(
+        retrofit: Retrofit
+    //    retrofitSource: RetrofitSource
+    ) : SourceProvider {
 
     override suspend fun getAreas(): Result<List<Areas>> =
             wrapExceptions{
@@ -98,7 +105,8 @@ class RetrofitSourceProvider(retrofitSource: RetrofitSource)
 
     }
 
-    private val sourceAPI: HeadHunterAPI = retrofitSource.retrofit.create(HeadHunterAPI::class.java)
+    private val sourceAPI: HeadHunterAPI = //retrofitSource.
+            retrofit.create(HeadHunterAPI::class.java)
 
     private suspend fun <T> wrapExceptions(block: suspend () -> T): T {
         // Выполняет блок и бросает исключения:

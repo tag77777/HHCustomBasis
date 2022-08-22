@@ -10,7 +10,6 @@ import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.Companion.EXPERIENCE_3_6
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.Companion.EXPERIENCE_MORE_THEN_6
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.Companion.EXPERIENCE_NO_EXPERIENCE
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -18,6 +17,7 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -25,22 +25,14 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.mapLatest
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
     private lateinit var binding: FragmentSearchBinding
-    private lateinit var settings: SearchSettings
+    @Inject lateinit var settings: SearchSettings
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-
-        if (Singleton.searchSettings != null) {
-            settings = Singleton.searchSettings!!
-        } else {
-            Singleton.searchSettings = SharedPreferencesSearchSettings(context.applicationContext)
-            settings = Singleton.searchSettings!!
-        }
-    }
 
 //    @OptIn(FlowPreview::class)
 //    @ExperimentalCoroutinesApi

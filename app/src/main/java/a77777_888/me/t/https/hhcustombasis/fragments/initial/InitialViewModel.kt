@@ -5,9 +5,12 @@ import a77777_888.me.t.https.hhcustombasis.model.PendingResult
 import a77777_888.me.t.https.hhcustombasis.model.Singleton
 import a77777_888.me.t.https.hhcustombasis.model.SourceProvider
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class InitialViewModel(
-    private val sourceProvider: SourceProvider = Singleton.retrofitSourceProvider,
+@HiltViewModel
+class InitialViewModel @Inject constructor(
+    private val sourceProvider: SourceProvider
 ) : BaseViewModel() {
 
     fun getAreas() {

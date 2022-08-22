@@ -14,8 +14,15 @@ import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.Companion.SCHEDULE_REMOTE
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.Companion.SCHEDULE_SHIFT
 import android.content.Context
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class SharedPreferencesSearchSettings(appContext: Context)
+@Singleton
+class SharedPreferencesSearchSettings
+    @Inject constructor(
+        @ApplicationContext appContext: Context
+    )
     : SearchSettings {
 
     private val sharedPreferences =

@@ -19,7 +19,9 @@ import android.view.View.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class VacancyFragment : BaseFragment(R.layout.vacancy_fragment) {
 
     private lateinit var binding: VacancyFragmentBinding

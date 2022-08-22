@@ -22,7 +22,9 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import androidx.navigation.fragment.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class EmployerFragment : BaseFragment(R.layout.fragment_employer) {
 
     private lateinit var binding: FragmentEmployerBinding
