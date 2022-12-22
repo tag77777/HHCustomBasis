@@ -1,6 +1,6 @@
 Search app sample for russian job service hh.ru.
 
-##Stack: 
+## Stack: 
 *   MVVM & Single Activity & Navigation Component
 *   Coroutines & Flow
 *   Retrofit & OkHttp
