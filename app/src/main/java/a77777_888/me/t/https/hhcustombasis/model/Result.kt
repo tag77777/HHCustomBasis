@@ -11,16 +11,6 @@ sealed class Result<T> {
 
     fun isFinished() = this is SuccessResult<T> || this is ErrorResult<T>
 
-//    fun <R> map(mapper: ((T) -> R)? = null): Result<R> =
-//        when (this) {
-//            is EmptyResult<T> -> EmptyResult()
-//            is PendingResult<T> -> PendingResult()
-//            is SuccessResult<T> -> {
-//                if (mapper == null) throw IllegalStateException("Result: Can't map without mapper")
-//                else SuccessResult(mapper(this.value))
-//            }
-//            is ErrorResult<T> -> ErrorResult(this.error)
-//        }
 }
 
 class EmptyResult<T> : Result<T>()

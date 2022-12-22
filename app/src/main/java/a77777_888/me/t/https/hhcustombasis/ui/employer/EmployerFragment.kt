@@ -1,9 +1,9 @@
-package a77777_888.me.t.https.hhcustombasis.fragments.employer
+package a77777_888.me.t.https.hhcustombasis.ui.employer
 
 import a77777_888.me.t.https.hhcustombasis.R
 import a77777_888.me.t.https.hhcustombasis.databinding.FragmentEmployerBinding
-import a77777_888.me.t.https.hhcustombasis.fragments.WebViewFragment
-import a77777_888.me.t.https.hhcustombasis.fragments.base.BaseFragment
+import a77777_888.me.t.https.hhcustombasis.ui.WebViewFragment
+import a77777_888.me.t.https.hhcustombasis.ui.base.BaseFragment
 import a77777_888.me.t.https.hhcustombasis.model.EmptyResult
 import a77777_888.me.t.https.hhcustombasis.model.ErrorResult
 import a77777_888.me.t.https.hhcustombasis.model.PendingResult
@@ -31,7 +31,7 @@ class EmployerFragment : BaseFragment(R.layout.fragment_employer) {
     override val viewModel: EmployerViewModel by viewModels()
 
     @SuppressLint("SetTextI18n")
-    override val resultHandler: (result: Result<*>) -> Unit = {
+    override val resultHandler: (result: Result<out Any>) -> Unit = {
         binding.run {
 
                 when (it) {

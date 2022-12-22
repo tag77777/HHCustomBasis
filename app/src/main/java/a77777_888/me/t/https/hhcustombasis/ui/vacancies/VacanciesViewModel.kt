@@ -1,4 +1,4 @@
-package a77777_888.me.t.https.hhcustombasis.fragments.vacancies
+package a77777_888.me.t.https.hhcustombasis.ui.vacancies
 
 import a77777_888.me.t.https.hhcustombasis.model.SourceProvider
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings

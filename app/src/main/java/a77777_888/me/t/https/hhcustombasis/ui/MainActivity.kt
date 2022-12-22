@@ -1,10 +1,10 @@
-package a77777_888.me.t.https.hhcustombasis
+package a77777_888.me.t.https.hhcustombasis.ui
 
+import a77777_888.me.t.https.hhcustombasis.R
 import a77777_888.me.t.https.hhcustombasis.databinding.ActivityMainBinding
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
+//        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
         setSupportActionBar(binding.toolBar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
@@ -59,5 +59,7 @@ class MainActivity : AppCompatActivity() {
         else
             super.onBackPressed()
     }
+
 }
+
 

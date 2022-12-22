@@ -1,12 +1,12 @@
-package a77777_888.me.t.https.hhcustombasis.fragments.vacancies
+package a77777_888.me.t.https.hhcustombasis.ui.vacancies
 
 import a77777_888.me.t.https.hhcustombasis.R
 import a77777_888.me.t.https.hhcustombasis.databinding.VacanciesFragmentBinding
-import a77777_888.me.t.https.hhcustombasis.fragments.adapters.DefaultLoadStateAdapter
-import a77777_888.me.t.https.hhcustombasis.fragments.adapters.DefaultLoadStateAdapterNavigator
-import a77777_888.me.t.https.hhcustombasis.fragments.adapters.VacanciesAdapter
-import a77777_888.me.t.https.hhcustombasis.fragments.adapters.VacanciesAdapterNavigator
-import a77777_888.me.t.https.hhcustombasis.fragments.vacancy.VacancyFragment
+import a77777_888.me.t.https.hhcustombasis.ui.vacancies.adapters.DefaultLoadStateAdapter
+import a77777_888.me.t.https.hhcustombasis.ui.vacancies.adapters.DefaultLoadStateAdapterNavigator
+import a77777_888.me.t.https.hhcustombasis.ui.vacancies.adapters.VacanciesAdapter
+import a77777_888.me.t.https.hhcustombasis.ui.vacancies.adapters.VacanciesAdapterNavigator
+import a77777_888.me.t.https.hhcustombasis.ui.vacancy.VacancyFragment
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
@@ -34,6 +34,7 @@ class VacanciesFragment
     private val vacanciesAdapter = VacanciesAdapter(this)
 
 //    @FlowPreview
+    @OptIn(FlowPreview::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

@@ -7,54 +7,75 @@
 
     <fragment
         android:id="@+id/searchFragment"
-        android:name="a77777_888.me.t.https.hhcustombasis.fragments.search.SearchFragment"
+        android:name="a77777_888.me.t.https.hhcustombasis.ui.search.SearchFragment"
         android:label="search_fragment"
         tools:layout="@layout/fragment_search" >
         <action
             android:id="@+id/action_searchFragment_to_vacanciesFragment"
-            app:destination="@id/vacanciesFragment" />
+            app:destination="@id/vacanciesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/vacanciesFragment"
-        android:name="a77777_888.me.t.https.hhcustombasis.fragments.vacancies.VacanciesFragment"
+        android:name="a77777_888.me.t.https.hhcustombasis.ui.vacancies.VacanciesFragment"
         android:label="vacancies_fragment"
         tools:layout="@layout/vacancies_fragment" >
         <action
             android:id="@+id/action_vacanciesFragment_to_vacancyFragment"
-            app:destination="@id/vacancyFragment" />
+            app:destination="@id/vacancyFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/vacancyFragment"
-        android:name="a77777_888.me.t.https.hhcustombasis.fragments.vacancy.VacancyFragment"
+        android:name="a77777_888.me.t.https.hhcustombasis.ui.vacancy.VacancyFragment"
         android:label="vacancy_fragment"
         tools:layout="@layout/vacancy_fragment" >
         <action
             android:id="@+id/action_vacancyFragment_to_employerFragment"
-            app:destination="@id/employerFragment" />
+            app:destination="@id/employerFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
         <action
             android:id="@+id/action_vacancyFragment_to_webViewFragment"
-            app:destination="@id/webViewFragment" />
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/employerFragment"
-        android:name="a77777_888.me.t.https.hhcustombasis.fragments.employer.EmployerFragment"
+        android:name="a77777_888.me.t.https.hhcustombasis.ui.employer.EmployerFragment"
         android:label="employer_fragment"
         tools:layout="@layout/fragment_employer" >
         <action
             android:id="@+id/action_employerFragment_to_webViewFragment"
-            app:destination="@id/webViewFragment" />
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/webViewFragment"
-        android:name="a77777_888.me.t.https.hhcustombasis.fragments.WebViewFragment"
+        android:name="a77777_888.me.t.https.hhcustombasis.ui.WebViewFragment"
         android:label="WebViewFragment" />
     <fragment
         android:id="@+id/initialFragment"
-        android:name="a77777_888.me.t.https.hhcustombasis.fragments.initial.InitialFragment"
+        android:name="a77777_888.me.t.https.hhcustombasis.ui.splash.SplashFragment"
         android:label="fragment_initial"
-        tools:layout="@layout/fragment_initial" >
+        tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_initialFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/fade_in" />
     </fragment>
 </navigation>

@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HHCustomBasis">
         <activity
-            android:name="a77777_888.me.t.https.hhcustombasis.MainActivity"
+            android:name="a77777_888.me.t.https.hhcustombasis.ui.MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

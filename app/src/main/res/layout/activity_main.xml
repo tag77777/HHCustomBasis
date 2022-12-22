@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    android:background="@drawable/base_background"
+    tools:context=".ui.MainActivity"
     >
 
      <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E91E5E"
+         android:id="@+id/toolBar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="@color/red"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
     </com.google.android.material.appbar.MaterialToolbar>

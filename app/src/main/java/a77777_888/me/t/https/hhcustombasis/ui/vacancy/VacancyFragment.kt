@@ -1,10 +1,10 @@
-package a77777_888.me.t.https.hhcustombasis.fragments.vacancy
+package a77777_888.me.t.https.hhcustombasis.ui.vacancy
 
 import a77777_888.me.t.https.hhcustombasis.R
 import a77777_888.me.t.https.hhcustombasis.databinding.VacancyFragmentBinding
-import a77777_888.me.t.https.hhcustombasis.fragments.WebViewFragment
-import a77777_888.me.t.https.hhcustombasis.fragments.base.BaseFragment
-import a77777_888.me.t.https.hhcustombasis.fragments.employer.EmployerFragment
+import a77777_888.me.t.https.hhcustombasis.ui.WebViewFragment
+import a77777_888.me.t.https.hhcustombasis.ui.base.BaseFragment
+import a77777_888.me.t.https.hhcustombasis.ui.employer.EmployerFragment
 import a77777_888.me.t.https.hhcustombasis.model.*
 import a77777_888.me.t.https.hhcustombasis.model.entities.vacancy.VacancyResponseEntity
 import a77777_888.me.t.https.hhcustombasis.utils.toPatternDateStringFromISO8601String
@@ -29,7 +29,7 @@ class VacancyFragment : BaseFragment(R.layout.vacancy_fragment) {
     private lateinit var vacancyResponse: VacancyResponseEntity
 
     @SuppressLint("SetTextI18n")
-    override val resultHandler: (result: Result<*>) -> Unit = {
+    override val resultHandler: (result: Result<out Any>) -> Unit = {
         binding.run {
 
                 when (it) {

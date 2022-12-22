@@ -1,4 +1,4 @@
-package a77777_888.me.t.https.hhcustombasis.fragments
+package a77777_888.me.t.https.hhcustombasis.ui
 
 import a77777_888.me.t.https.hhcustombasis.R
 import a77777_888.me.t.https.hhcustombasis.databinding.FragmentWebViewBinding

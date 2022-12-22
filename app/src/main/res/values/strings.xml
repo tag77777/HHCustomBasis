@@ -24,7 +24,7 @@
     <string name="flexible">Гибкий график</string>
     <string name="fly_in_fly_out">Вахта</string>
     <string name="period">Период</string>
-    <string name="numbers_of_days">За какое количество дней</string>
+    <string name="numbers_of_days"> дней</string>
     <string name="shift">Сменный график</string>
     <string name="industries">Сферы деятельности:</string>
     <string name="hh_ru_page">Вакансия на hh.ru</string>
@@ -45,4 +45,5 @@
     <string name="exit_menu_title">ВЫХОД</string>
     <string name="see_in_browser">Смотреть в браузере</string>
     <string name="hh_ru_company">Компания на hh.ru</string>
+    <string name="search">Поиск</string>
 </resources>

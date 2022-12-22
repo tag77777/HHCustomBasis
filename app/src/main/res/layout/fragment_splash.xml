@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/search_background"
-    tools:context=".fragments.initial.InitialFragment">
+    android:background="@color/black"
+    tools:context=".ui.splash.SplashFragment">
+
+    <TextView
+        android:id="@+id/hhTextView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="hh.ru"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="64dp"
+        android:background="@drawable/hh_bg"
+        android:padding="16dp"
+        android:layout_marginBottom="120dp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        tools:ignore="HardcodedText,SpUsage"
+        />
+
+    <TextView
+        android:id="@+id/customBasisTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="custom\nbasis"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:layout_marginTop="48dp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        tools:ignore="HardcodedText,SpUsage"
+        />
+
+
 
     <LinearLayout
         android:id="@+id/waitLayout"
@@ -13,7 +51,7 @@
         android:orientation="vertical"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="72dp"
-        tools:visibility="invisible"
+        android:visibility="invisible"
     >
 
         <ProgressBar
@@ -31,7 +69,7 @@
             android:text="@string/please_wait"
             android:textStyle="bold|italic"
             android:textSize="18sp"
-            android:textColor="@color/teal_200"
+            android:textColor="@color/red_light"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
         />
@@ -45,7 +83,7 @@
         android:orientation="vertical"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="32dp"
-        tools:visibility="invisible"
+        android:visibility="invisible"
         >
 
         <TextView
@@ -54,9 +92,9 @@
             android:layout_height="wrap_content"
             android:textStyle="bold|italic"
             android:textSize="18sp"
-            android:textColor="@color/teal_200"
+            android:textColor="@color/red_light"
             android:layout_margin="8dp"
-            tools:text="Error Error Error Error Error Error Error Error Error Error "
+            tools:text="Упс...  Что то пошло не так"
         />
 
         <Button

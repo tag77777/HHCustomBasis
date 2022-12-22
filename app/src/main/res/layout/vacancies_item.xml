@@ -65,7 +65,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
 
             tools:background="#44000000"
-            />
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/companyNameTextView"

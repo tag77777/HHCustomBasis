@@ -1,4 +1,4 @@
-package a77777_888.me.t.https.hhcustombasis.fragments.adapters
+package a77777_888.me.t.https.hhcustombasis.ui.vacancies.adapters
 
 import a77777_888.me.t.https.hhcustombasis.databinding.DefaultLoadStateBinding
 import a77777_888.me.t.https.hhcustombasis.source.EmptyListException
@@ -30,7 +30,6 @@ class DefaultLoadStateAdapter(
 
     class Holder(
         private val binding: DefaultLoadStateBinding,
-//        private val swipeRefreshLayout: SwipeRefreshLayout?,
         private val navigator: DefaultLoadStateAdapterNavigator
     ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -40,20 +39,25 @@ class DefaultLoadStateAdapter(
         }
 
         fun bind(loadState: LoadState) = with(binding) {
-            progressBar.isVisible = loadState is LoadState.Loading
-
-            if (loadState is LoadState.Error) {
-                messageTextView.isVisible = true
-                tryAgainButton.isVisible = true
-                goBackButton.isVisible = true
-
-                if (loadState.error is EmptyListException) {
+            when (loadState) {
+                is LoadState.NotLoading -> {
+                    progressBar.isVisible = false
+                    messageTextView.isVisible = false
                     tryAgainButton.isVisible = false
-                    messageTextView.text = "Нет вакансий, соответствующих параметрам запроса"
+                    goBackButton.isVisible = false
+                }
+                is LoadState.Loading -> progressBar.isVisible = true
+                is LoadState.Error -> {
+                    messageTextView.isVisible = true
+                    tryAgainButton.isVisible = true
+                    goBackButton.isVisible = true
+
+                    if (loadState.error is EmptyListException) {
+                        tryAgainButton.isVisible = false
+                        messageTextView.text = "Нет вакансий, соответствующих параметрам запроса"
+                    }
                 }
             }
-
-
         }
     }
 }

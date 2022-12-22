@@ -1,4 +1,4 @@
-package a77777_888.me.t.https.hhcustombasis.fragments.adapters
+package a77777_888.me.t.https.hhcustombasis.ui.vacancies.adapters
 
 import a77777_888.me.t.https.hhcustombasis.databinding.VacanciesItemBinding
 import a77777_888.me.t.https.hhcustombasis.model.entities.vacancies.Vacancy
@@ -64,7 +64,6 @@ class VacanciesAdapter(
             }
 
             holder.binding.root.setOnClickListener {
-//                Singleton.vacancies = snapshot().items
                 navigator.goToVacancy(vacancy.id)
             }
 

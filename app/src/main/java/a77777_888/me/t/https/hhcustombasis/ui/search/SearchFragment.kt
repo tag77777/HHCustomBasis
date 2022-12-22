@@ -1,8 +1,7 @@
-package a77777_888.me.t.https.hhcustombasis.fragments.search
+package a77777_888.me.t.https.hhcustombasis.ui.search
 
 import a77777_888.me.t.https.hhcustombasis.R
 import a77777_888.me.t.https.hhcustombasis.databinding.FragmentSearchBinding
-import a77777_888.me.t.https.hhcustombasis.model.Singleton
 import a77777_888.me.t.https.hhcustombasis.model.entities.areas.Areas
 import a77777_888.me.t.https.hhcustombasis.model.entities.areas.startWith
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.*
@@ -10,9 +9,12 @@ import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.Companion.EXPERIENCE_3_6
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.Companion.EXPERIENCE_MORE_THEN_6
 import a77777_888.me.t.https.hhcustombasis.model.settings.search.SearchSettings.Companion.EXPERIENCE_NO_EXPERIENCE
+import a77777_888.me.t.https.hhcustombasis.source.AreasProvider
+import a77777_888.me.t.https.hhcustombasis.utils.hideSoftKeyboard
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.EditText
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -34,8 +36,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     @Inject lateinit var settings: SearchSettings
 
 
-//    @OptIn(FlowPreview::class)
-//    @ExperimentalCoroutinesApi
+    @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentSearchBinding.bind(view)
         super.onViewCreated(view, savedInstanceState)
@@ -52,10 +53,12 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             findWords?.let {
                 binding.findEditText.setText(findWords!!)
             }
+            binding.findEditText.makeSoftKeyboardHidden()
 
             excludeWords?.let {
                 binding.excludeEditText.setText(excludeWords!!)
             }
+            binding.excludeEditText.makeSoftKeyboardHidden()
 
             binding.nameFieldSearchChip.isChecked = findIn.name
             binding.descriptionFieldSearchChip.isChecked = findIn.description
@@ -81,6 +84,8 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             period?.let {
                 binding.periodEditText.setText(period)
             }
+
+            binding.periodEditText.makeSoftKeyboardHidden()
         }
     }
 
@@ -103,7 +108,9 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             setOnItemClickListener { _, _, position, _ ->
                 this.tag = adapter.getItem(position)
                 this.setText(adapter.getItem(position)?.name)
+                hideSoftKeyboard()
             }
+            makeSoftKeyboardHidden()
         }
 
         lifecycleScope.launch {
@@ -113,7 +120,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                     it.length > 1
                 }
                 .mapLatest { prefix ->
-                    Singleton.areas
+                    AreasProvider.areas
                         ?.startWith(prefix,7)
                         ?: listOf()
 
@@ -184,5 +191,11 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
     private fun goForward() {
         findNavController().navigate(R.id.action_searchFragment_to_vacanciesFragment)
     }
+
+    private fun EditText.makeSoftKeyboardHidden() {
+    setOnFocusChangeListener { _, hasFocus ->
+        if (!hasFocus) hideSoftKeyboard()
+    }
+}
 
 }

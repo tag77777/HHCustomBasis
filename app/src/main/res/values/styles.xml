@@ -4,7 +4,10 @@
     <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="chipBackgroundColor">@color/chip_background</item>
+        <item name="chipBackgroundColor">@color/chip_background_selector</item>
+        <item name="android:textColor">@color/chip_text_icon_color_selector</item>
+        <item name="checkedIconTint">@color/chip_text_icon_color_selector</item>
+        <item name="android:focusable">true</item>
     </style>
 
     <style name="TextInputLayoutStyle">
@@ -13,6 +16,10 @@
         <item name="boxBackgroundColor">@color/colorViewBackground</item>
         <item name="endIconMode">clear_text</item>
         <item name="helperTextTextColor">@color/colorViewBackground</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
     </style>
 
     <style name="CardViewStyle">
