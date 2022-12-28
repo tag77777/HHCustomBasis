@@ -22,7 +22,6 @@ import javax.inject.Singleton
 class RetrofitSourceProvider
     @Inject constructor(
         retrofit: Retrofit
-    //    retrofitSource: RetrofitSource
     ) : SourceProvider {
 
     override suspend fun getAreas(): Result<List<Areas>> =

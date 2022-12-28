@@ -33,7 +33,6 @@ class VacanciesFragment
 
     private val vacanciesAdapter = VacanciesAdapter(this)
 
-//    @FlowPreview
     @OptIn(FlowPreview::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -49,16 +48,13 @@ class VacanciesFragment
     }
 
     private fun setupVacanciesList() {
-
         binding.recyclerView.adapter = vacanciesAdapter.withLoadStateFooter(
             footer = DefaultLoadStateAdapter(this)
         )
-//        (binding.recyclerView.itemAnimator as? DefaultItemAnimator)?.supportsChangeAnimations = false
-
     }
 
     private fun observeVacancies(adapter: VacanciesAdapter) {
-        viewLifecycleOwner.lifecycleScope.launch {
+       lifecycleScope.launch {
             viewModel.flowOfVacancies
                 .collectLatest { pagingData ->
                 adapter.submitData(pagingData)
@@ -68,7 +64,7 @@ class VacanciesFragment
 
     @FlowPreview
     private fun observeLoadState(adapter: VacanciesAdapter) {
-        viewLifecycleOwner.lifecycleScope.launch {
+        lifecycleScope.launch {
             adapter.loadStateFlow.debounce(200).collectLatest {
                 mainLoadStateHolder.bind(it.refresh)
             }
